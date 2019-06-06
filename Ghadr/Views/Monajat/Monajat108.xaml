@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Ghadr.Views.Monajat.Monajat108"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ghadr.Views.Monajat"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Style="{StaticResource MonajatArabicViweBoxStyle}">
+            <TextBlock Style="{StaticResource MonajatArabicTextBlockStyle}">
+                وَ أَسْأَلُكَ الْأَمَانَ يَوْمَ يَفِرُّ الْمَرْءُ مِنْ أَخِيهِ وَ أُمِّهِ وَ أَبِيهِ  <LineBreak/>
+                 وَ صَاحِبَتِهِ وَ بَنِيهِ لِكُلِّ امْرِى ءٍ مِنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Style="{StaticResource MonajatPersianViweBoxStyle}" >
+            <TextBlock Style="{StaticResource MonajatPersianTextBlockStyle}">
+                خدایا از تو امان می خواهم در آن روزى که سود ندهد کسى را نه مال و نه فرزندان<LineBreak/>
+               مگر آن کس که دلى پاک به نزد خدا آورد
+            </TextBlock>
+        </Viewbox>
+    </Grid>
+</Page>

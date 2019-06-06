@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="Ghadr.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    xmlns:helper="using:Ghadr.Helpers"
+    xmlns:xaml="using:Windows.UI.Xaml"
+    mc:Ignorable="d" FontFamily="IRANSans" >
+    <Page.Resources>
+        <helper:EnumToBooleanConverter x:Key="EnumToBooleanConverter" EnumType="ElementTheme" />
+    </Page.Resources>
+    <Grid Margin="{StaticResource MediumLeftRightMargin}">
+        <StackPanel
+            x:Name="ContentArea">
+            <AppBarButton Name="HomeButton" Click="HomeButton_Click" Margin="0,10,0,0" Width="25" Height="25" >
+                <SymbolIcon Symbol="Home" Margin="0,-22,0,0"></SymbolIcon>
+            </AppBarButton>
+            <TextBlock
+                x:Uid="Settings_Personalization"
+                Style="{StaticResource SubtitleTextBlockStyle}" />
+            <StackPanel Margin="{StaticResource SettingsSubheaderMargin}">
+                <TextBlock
+                    x:Uid="Settings_Theme"
+                    Style="{StaticResource BodyTextStyle}" />
+
+                <StackPanel Margin="{StaticResource EightTopMargin}" >
+                    <RadioButton 
+                        x:Uid="Settings_Theme_Light" 
+                        GroupName="AppTheme" 
+                        Checked="ThemeChanged_CheckedAsync" 
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Light, Mode=OneWay}" >
+                        <RadioButton.CommandParameter>
+                            <xaml:ElementTheme>Light</xaml:ElementTheme>
+                        </RadioButton.CommandParameter> 
+                    </RadioButton>
+                    <RadioButton 
+                        x:Uid="Settings_Theme_Dark" 
+                        GroupName="AppTheme"
+                        Checked="ThemeChanged_CheckedAsync" 
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Dark, Mode=OneWay}">
+                        <RadioButton.CommandParameter>
+                            <xaml:ElementTheme>Dark</xaml:ElementTheme>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                    <RadioButton 
+                        x:Uid="Settings_Theme_Default"
+                        GroupName="AppTheme"
+                        Checked="ThemeChanged_CheckedAsync"
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Default, Mode=OneWay}">
+                        <RadioButton.CommandParameter>
+                            <xaml:ElementTheme>Default</xaml:ElementTheme>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                </StackPanel>
+
+                <ComboBox x:Name="ArabicFontFamilyComboBox" DisplayMemberPath="Source" PlaceholderText="فونت متنهای عربی را انتخاب کنید" Width="250"
+                    ItemsSource="{x:Bind fonts}"  SelectionChanged="ArabicFontFamilyComboBox_SelectionChanged">
+                </ComboBox>
+                <TextBlock x:Name="ArabicTestTextBlock">بِسْمِ الرَّحْمَنِ الرَّحِیمِ</TextBlock>
+                <ComboBox x:Name="PersianFontFamilyComboBox" DisplayMemberPath="Source" PlaceholderText="فونت متنهای فارسی را انتخاب کنید" Width="250"
+                    ItemsSource="{x:Bind fonts}"  SelectionChanged="PersianFontFamilyComboBox_SelectionChanged">
+                </ComboBox>
+                <TextBlock x:Name="PersianTestTextBlock">به نام خداوند بخشنده مهربان</TextBlock>
+
+            </StackPanel>
+
+            <TextBlock
+                    x:Uid="Settings_About"
+                    Style="{StaticResource SubtitleTextBlockStyle}"/>
+
+            <StackPanel Margin="{StaticResource EightTopMargin}">
+               
+                <TextBlock
+                    x:Uid="Settings_AboutDescription"
+                    Margin="{StaticResource EightTopMargin}" />
+
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

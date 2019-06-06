@@ -1,0 +1,40 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ghadr.Styles"
+    xmlns:setting="using:Ghadr.Views">
+    
+    
+    <!--Costomize Arabic ViweBox in Mojir-->
+    <Style x:Key="MojirArabicViweBoxStyle" TargetType="Viewbox">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="MaxHeight" Value="300"/>
+        <Setter Property="Grid.Column" Value="1"/>
+    </Style>
+    <!--Costomize Arabic TextBlock in Mojir-->
+    <Style x:Key="MojirArabicTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="neirizi"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="75"/>
+        <Setter Property="LineHeight" Value="150"/>
+    </Style>
+
+    <!-- Customize Persian ViweBox in Mojir-->
+    <Style x:Key="MojirPersianViweBoxStyle" TargetType="Viewbox">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="MaxHeight" Value="200"/>
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Grid.Row" Value="2"/>
+    </Style>
+
+    <!-- Customize Persian TextBlock in Mojir -->
+    <Style x:Key="MojirPersianTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="B Titr"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="LineHeight" Value="70"/>
+    </Style>
+
+</ResourceDictionary>

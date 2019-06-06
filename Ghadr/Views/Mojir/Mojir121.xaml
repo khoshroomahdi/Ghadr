@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Ghadr.Views.Mojir.Mojir121"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ghadr.Views.Mojir"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Style="{StaticResource MojirArabicViweBoxStyle}">
+            <TextBlock Style="{StaticResource MojirArabicTextBlockStyle}">
+                 سُبْحَانَكَ يَا حَنَّانُ تَعَالَيْتَ يَا مَنَّانُ  <LineBreak/>
+                 أَجِرْنَا مِنَ النَّارِ يَا مُجِيرُ
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Style="{StaticResource MojirPersianViweBoxStyle}" >
+            <TextBlock Style="{StaticResource MojirPersianTextBlockStyle}">
+                پاك و منزهى اى مهربان! بلند مرتبه‌ اى اى نعمت بخش<LineBreak/>
+               ما را از آتش پناه بده ای پناه دهنده!
+            </TextBlock>
+        </Viewbox>
+    </Grid>
+</Page>

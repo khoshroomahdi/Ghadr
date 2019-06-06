@@ -1,0 +1,83 @@
+﻿<Page
+    FlowDirection="RightToLeft"
+    x:Class="Ghadr.Views.MojirPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ghadr.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mojir="using:Ghadr.Views.Mojir"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <FlipView>
+            <FlipViewItem Name="MojirFlipViwe" >
+                <mojir:Mojir100/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir101/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir102/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir103/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir104/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir105/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir106/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir107/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir108/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir109/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir110/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir111/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir112/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir113/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir114/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir115/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir116/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir117/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir118/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir119/>
+            </FlipViewItem>
+            <FlipViewItem >
+                <mojir:Mojir120/>
+            </FlipViewItem>
+        </FlipView>
+        <AppBarButton Name="HomeButton" Click="HomeButton_Click" Margin="0,10,0,0" Width="25" Height="25" >
+            <SymbolIcon Symbol="Home" Margin="0,-22,0,0"></SymbolIcon>
+        </AppBarButton>
+    </Grid>
+</Page>
