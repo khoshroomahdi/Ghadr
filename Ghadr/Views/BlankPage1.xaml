@@ -13,6 +13,7 @@
         <ComboBox x:Name="bc" SelectionChanged="Bc_SelectionChanged">
             <x:String>Neirizi</x:String>
             <x:String>Qurantaha</x:String>
+            <TextBlock></TextBlock>
 
         </ComboBox>
 
